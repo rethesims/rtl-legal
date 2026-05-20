@@ -1,0 +1,14 @@
+title: Restore the Luminous
+description: 全カード無料・ガチャなしの戦略カードゲーム
+url: https://rethesims.github.io
+baseurl: /rtl-legal
+
+theme: jekyll-theme-minimal
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
