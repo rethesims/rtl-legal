@@ -6,7 +6,7 @@ permalink: /privacy/
 
 # Restore the Luminous プライバシーポリシー
 
-**最終更新日**: 2026年05月20日
+**最終更新日**: 2026年05月21日
 **事業者**: <!-- [要確定] 屋号 + 代表者氏名 / 法人名 を記載 --> EpicQuest（暫定）
 **連絡先**: [rethesims@gmail.com](mailto:rethesims@gmail.com)
 
@@ -53,7 +53,20 @@ permalink: /privacy/
 | IP アドレスから推定される国・地域 | Firebase / AWS が自動取得 | 地域別品質改善、不正検知 |
 | Firebase Installation ID（端末固有の匿名識別子） | Firebase SDK が自動発行 | 重複起動の判定、分析 |
 
-### 2.4 収集しない情報
+### 2.4 公式ウェブサイト（restoretheluminous.com）のアクセス情報
+
+公式ウェブサイトおよび関連サブドメイン（`deck-builder.restoretheluminous.com` 等）では、Google Analytics 4（以下「GA4」）を用いて以下の情報を取得します。
+
+| 項目 | 取得方法 | 用途 |
+|------|---------|------|
+| ページ閲覧履歴、滞在時間、参照元 URL | GA4 が Cookie 経由で取得 | サイト改善、流入経路分析 |
+| ブラウザ種別、OS、画面解像度、言語設定 | GA4 が自動取得 | 動作確認、表示最適化 |
+| IP アドレス（匿名化済） | GA4 が自動取得 | 地域別アクセス傾向の把握 |
+| サイト内ボタンのクリックイベント（ダウンロード導線等） | GA4 が取得 | 動線改善 |
+
+GA4 は IP アドレスを匿名化したうえで取得しています。広告 ID との連携、ユーザー個人の特定に用いるパラメータは取得しません。
+
+### 2.5 収集しない情報
 
 本アプリは以下の情報を **収集しません**:
 
@@ -85,12 +98,13 @@ permalink: /privacy/
 
 | 委託先 | 委託する処理 | データ保管場所 |
 |--------|-------------|--------------|
-| Google LLC（Firebase Analytics） | 利用状況分析 | 米国 |
+| Google LLC（Firebase Analytics） | アプリ利用状況分析 | 米国 |
+| Google LLC（Google Analytics 4） | ウェブサイト利用状況分析 | 米国 |
 | Google LLC（Firebase Installations） | 端末識別子の管理 | 米国 |
 | Google LLC（Google Play Games Services） | Android アカウント連携 | 米国 |
 | Apple Inc.（Game Center） | iOS アカウント連携 | 米国 |
 | Unity Technologies（Unity Gaming Services Authentication） | 匿名アカウント基盤 | 米国 |
-| Amazon Web Services（AppSync / Lambda / DynamoDB / CloudWatch） | ゲームデータの保存・同期・ログ | 日本（東京リージョン） |
+| Amazon Web Services（S3 / CloudFront / AppSync / Lambda / DynamoDB / CloudWatch） | ウェブサイト配信、ゲームデータの保存・同期・ログ | 日本（東京リージョン）／グローバル CDN |
 
 ユーザーが任意で Discord 連携機能（対戦募集等）を利用した場合、Discord 社のサーバーに該当情報が投稿されます。これは Discord 社のプライバシーポリシーに従って取り扱われます。
 
@@ -141,7 +155,18 @@ permalink: /privacy/
 
 ## 9. Cookie / 同様の技術について
 
+### アプリ（iOS / Android / Windows 等）
 本アプリは Cookie を直接使用しません。ただし、Firebase Analytics SDK が端末固有の匿名識別子（Firebase Installation ID）を発行・利用します。
+
+### 公式ウェブサイト（restoretheluminous.com）
+公式ウェブサイトおよび関連サブドメインでは、Google Analytics 4 のために以下の Cookie を使用します。
+
+| Cookie 名 | 発行元 | 用途 | 有効期限 |
+|----------|-------|------|---------|
+| `_ga` | Google Analytics 4 | ユーザー識別（匿名） | 最長 2 年 |
+| `_ga_<container-id>` | Google Analytics 4 | セッション状態の保持 | 最長 2 年 |
+
+これらの Cookie はサイト改善目的のみに利用し、広告配信や個人の特定には使用しません。Cookie の利用を停止したい場合は、ブラウザの設定で Cookie をブロックするか、[Google アナリティクス オプトアウト アドオン](https://tools.google.com/dlpage/gaoptout) をご利用ください。
 
 ---
 
@@ -172,3 +197,4 @@ permalink: /privacy/
 | 日付 | 内容 |
 |------|------|
 | 2026-05-20 | 初版公開 |
+| 2026-05-21 | 公式ウェブサイト（restoretheluminous.com）公開に伴い、Google Analytics 4 による Cookie 使用・アクセス解析の項を追記（2.4 節新設、4 章 / 9 章を更新）|
