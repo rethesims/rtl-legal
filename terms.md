@@ -7,7 +7,7 @@ permalink: /terms/
 # Restore the Luminous 利用規約
 
 **最終更新日**: 2026年05月20日
-**事業者**: <!-- [要確定] 屋号 + 代表者氏名 / 法人名 を記載 --> EpicQuest（暫定）
+**事業者**: Epicquest合同会社
 **連絡先**: [rethesims@gmail.com](mailto:rethesims@gmail.com)
 
 ---
