@@ -11,6 +11,7 @@ title: Restore the Luminous
 
 - [プライバシーポリシー](privacy/)
 - [利用規約](terms/)
+- [特定商取引法に基づく表記](tokushoho/)
 - [公式 X (Twitter)](https://x.com/RtL_official_EQ)
 - [公式 YouTube](https://www.youtube.com/@RtL_official_EQ)
 

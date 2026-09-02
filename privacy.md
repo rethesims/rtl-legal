@@ -6,9 +6,9 @@ permalink: /privacy/
 
 # Restore the Luminous プライバシーポリシー
 
-**最終更新日**: 2026年05月21日
-**事業者**: Epicquest合同会社
-**連絡先**: [rethesims@gmail.com](mailto:rethesims@gmail.com)
+**最終更新日**: 2026年08月29日
+**事業者**: EpicQuest合同会社
+**連絡先**: [info@epicquest.ninja](mailto:info@epicquest.ninja)
 
 ---
 
@@ -32,6 +32,7 @@ permalink: /privacy/
 | プレイヤー名（表示名） | ユーザーが設定 | 任意 | 対戦相手への表示 |
 | Apple Game Center / Google Play Games の識別子 | アカウント連携時 | 任意 | 機種変更時のデータ復元 |
 | 連携時に Apple / Google から提供されるメールアドレス | アカウント連携時 | 任意 | アカウント復旧、運営からの重要連絡 |
+| Unity アカウント（Unity Player Accounts）の識別子・メールアドレス | アカウント連携時 | 任意 | 機種変更および異なる OS 間でのデータ復元 |
 
 ### 2.2 ゲームプレイ情報
 
@@ -66,14 +67,25 @@ permalink: /privacy/
 
 GA4 は IP アドレスを匿名化したうえで取得しています。広告 ID との連携、ユーザー個人の特定に用いるパラメータは取得しません。
 
-### 2.5 収集しない情報
+### 2.5 購入情報（アプリ内課金をご利用の場合）
+
+アプリ内課金をご利用いただいた場合、本事業者は以下を取得・保存します。**アプリ内課金をご利用にならない限り、本項の情報は発生しません。**
+
+| 項目 | 取得方法 | 用途 |
+|------|---------|------|
+| 商品 ID、取引 ID、購入日時 | Apple / Google のレシート検証結果から取得 | 購入内容の付与、二重付与の防止、お問い合わせ対応 |
+| 購入金額（日本円） | 同上 | 会計・売上集計 |
+
+決済そのものは Apple App Store / Google Play が行います。本事業者はレシートの正当性を各ストアに照会するのみで、**カード番号・口座情報等の決済手段そのものは受け取りません**（2.6 参照）。
+
+### 2.6 収集しない情報
 
 本アプリは以下の情報を **収集しません**:
 
 - 氏名、住所、電話番号、生年月日（アカウント連携で取得される場合を除く）
 - 正確な位置情報（GPS）
 - 連絡先、写真、マイク、カメラへのアクセス
-- クレジットカード等の支払い情報（現時点で課金機能なし）
+- クレジットカード番号・銀行口座情報等の決済手段そのもの（決済は各ストアが行い、本事業者は受け取りません）
 - 広告 ID（IDFA / AAID）を用いた追跡
 
 ---
@@ -103,8 +115,10 @@ GA4 は IP アドレスを匿名化したうえで取得しています。広告
 | Google LLC（Firebase Installations） | 端末識別子の管理 | 米国 |
 | Google LLC（Google Play Games Services） | Android アカウント連携 | 米国 |
 | Apple Inc.（Game Center） | iOS アカウント連携 | 米国 |
-| Unity Technologies（Unity Gaming Services Authentication） | 匿名アカウント基盤 | 米国 |
+| Unity Technologies（Unity Gaming Services Authentication / Unity Player Accounts） | 匿名アカウント基盤、クロスプラットフォーム アカウント連携 | 米国 |
 | Amazon Web Services（S3 / CloudFront / AppSync / Lambda / DynamoDB / CloudWatch） | ウェブサイト配信、ゲームデータの保存・同期・ログ | 日本（東京リージョン）／グローバル CDN |
+| Apple Inc.（App Store Server API） | アプリ内課金レシートの正当性照会 | 米国 |
+| Google LLC（Google Play Developer API） | アプリ内課金レシートの正当性照会 | 米国 |
 
 ユーザーが任意で Discord 連携機能（対戦募集等）を利用した場合、Discord 社のサーバーに該当情報が投稿されます。これは Discord 社のプライバシーポリシーに従って取り扱われます。
 
@@ -187,7 +201,7 @@ GA4 は IP アドレスを匿名化したうえで取得しています。広告
 
 本ポリシーまたは個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。
 
-- **メールアドレス**: [rethesims@gmail.com](mailto:rethesims@gmail.com)
+- **メールアドレス**: [info@epicquest.ninja](mailto:info@epicquest.ninja)
 - **対応時間**: 平日 10:00 – 18:00（土日祝・年末年始を除く）
 - **公式 X**: [@RtL_official_EQ](https://x.com/RtL_official_EQ)
 
@@ -199,3 +213,5 @@ GA4 は IP アドレスを匿名化したうえで取得しています。広告
 |------|------|
 | 2026-05-20 | 初版公開 |
 | 2026-05-21 | 公式ウェブサイト（restoretheluminous.com）公開に伴い、Google Analytics 4 による Cookie 使用・アクセス解析の項を追記（2.4 節新設、4 章 / 9 章を更新）|
+| 2026-08-22 | Unity Player Accounts によるクロスプラットフォーム アカウント連携の追加に伴い、2.1 取得情報および 委託先一覧を更新 |
+| 2026-08-29 | 2026-05-21 改定（GA4 / Cookie）の記述が本リポジトリ側の写しから欠落していたため復元。あわせてアプリ内課金の開始に備え 2.5 購入情報を新設し、2.6 の決済情報の記述を「決済手段そのものは受け取らない」に改めた（#2554 / #2555）。事業者名を登記簿の商号 **EpicQuest合同会社** に統一（従前は `Epicquest` 表記だった）。お問い合わせ窓口を info@epicquest.ninja に変更 |
